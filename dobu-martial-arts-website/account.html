@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Account — Membership, Bookings &amp; Payments | DoBu Martial Arts</title>
+<meta name="description" content="Manage your DoBu Martial Arts membership — view your tier, track sessions, book private tuition, update payment details and manage your account.">
+<meta name="theme-color" content="#0F0D0B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/account.css">
+</head>
+
+<body data-page="account">
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="progress" role="presentation"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="sash" id="sash">
+  <div class="sash-inner">
+    <a class="brand" href="index.html">DO<span>BU</span> <em>MARTIAL ARTS</em></a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+
+     <nav class="links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="aboutus.html">About</a>
+      <a href="martial-arts.html">Martial Arts</a>
+      <a href="timetable.html">Classes</a>
+      <a href="membership.html">Membership</a>
+      <a href="instructors.html">Instructors</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+      <a href="account.html">Account</a>
+    </nav>
+
+    <a class="header-cta" href="#account">
+      Sign up
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+        <path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+      </svg>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-grid">
+
+      <div class="hero-panel">
+        <span class="hero-num">01 / 06</span>
+
+        <p class="eyebrow reveal">Membership · Bookings · Payments</p>
+
+        <h1 class="reveal">
+          Your account,<br>
+          <em>your training.</em>
+        </h1>
+
+        <p class="lede reveal">
+          Everything about your DoBu membership in one place — your tier, how many
+          sessions you've used this week, upcoming bookings, payment methods and
+          account settings. Changes take effect immediately.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a class="btn" href="#account">
+            Create an account
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+          </a>
+          <a class="btn ghost" href="#dashboard">View dashboard</a>
+        </div>
+
+        <div class="hero-meta reveal">
+          <div class="m-item">
+            <span class="m-k">Account status</span>
+            <span class="m-v">Free to join</span>
+          </div>
+          <div class="m-item">
+            <span class="m-k">Changes</span>
+            <span class="m-v">Instant, no fees</span>
+          </div>
+          <div class="m-item">
+            <span class="m-k">Cancellation</span>
+            <span class="m-v">Any time online</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="images/judo6.jpg"
+             onerror="this.src='https://picsum.photos/seed/dobu-account-hero/1200/1400'"
+             alt="DoBu member training on the mat" loading="eager" fetchpriority="high">
+
+        <div class="hero-badge">
+          FREE<small>TO JOIN</small>
+        </div>
+
+        <div class="hero-stamp">
+          <span class="stamp-line">Members area</span>
+          <span class="stamp-main">Tier · Sessions · Bookings · Payments</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TICKER ================= -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Free to Join</span><span class="dot"></span>
+      <span>No Card Required</span><span class="dot"></span>
+      <span>Instant Changes</span><span class="dot"></span>
+      <span>Cancel Any Time</span><span class="dot"></span>
+      <span>Track Sessions</span><span class="dot"></span>
+      <span>Book Tuition</span><span class="dot"></span>
+      <span>Manage Payments</span><span class="dot"></span>
+      <span>Post on Forum</span><span class="dot"></span>
+      <span>Free to Join</span><span class="dot"></span>
+      <span>No Card Required</span><span class="dot"></span>
+      <span>Instant Changes</span><span class="dot"></span>
+      <span>Cancel Any Time</span><span class="dot"></span>
+      <span>Track Sessions</span><span class="dot"></span>
+      <span>Book Tuition</span><span class="dot"></span>
+      <span>Manage Payments</span><span class="dot"></span>
+      <span>Post on Forum</span><span class="dot"></span>
+    </div>
+  </div>
+
+  <!-- ================= SUBNAV ================= -->
+  <nav class="subnav" id="subnav" aria-label="Jump to a section">
+    <div class="subnav-inner">
+      <a href="#account" class="active"><span class="sn-num">01</span> Account</a>
+      <a href="#membership"><span class="sn-num">02</span> Membership</a>
+      <a href="#bookings"><span class="sn-num">03</span> Bookings</a>
+      <a href="#payments"><span class="sn-num">04</span> Payments</a>
+      <a href="#settings"><span class="sn-num">05</span> Settings</a>
+      <a href="#faq"><span class="sn-num">06</span> FAQ</a>
+    </div>
+  </nav>
+
+  <!-- ================= STATS ================= -->
+  <section class="stats-band tight">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat reveal">
+          <span class="n">01 / Sign up</span>
+          <span class="v">Free</span>
+          <span class="l">No card required until you pick a tier.</span>
+        </div>
+        <div class="stat reveal">
+          <span class="n">02 / Setup time</span>
+          <span class="v">2<span style="font-size:.45em;color:var(--text-3);margin-left:6px">min</span></span>
+          <span class="l">Name, email, password — that's the whole form.</span>
+        </div>
+        <div class="stat reveal">
+          <span class="n">03 / Changes</span>
+          <span class="v">Instant</span>
+          <span class="l">Tier switches take effect immediately.</span>
+        </div>
+        <div class="stat reveal">
+          <span class="n">04 / Cancellation</span>
+          <span class="v">£0</span>
+          <span class="l">Any time online, no exit fee, no calls.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AUTH SECTION
+       ============================================================ -->
+  <section class="auth-section" id="account">
+    <div class="wrap">
+
+      <div class="auth-head reveal">
+        <p class="section-label"><span class="num">01</span> Get started</p>
+        <h2>Create an account<br>or log in.</h2>
+        <p class="lede">
+          An account lets you choose a membership, book private tuition, track
+          your sessions and manage payments. Reading the forum doesn't require
+          one — but posting does.
+        </p>
+      </div>
+
+      <!-- ============================================================
+           SIGNED OUT VIEW
+           ============================================================ -->
+      <div id="authView" class="auth-wrap reveal">
+
+        <!-- LEFT: benefits -->
+        <aside class="auth-side">
+          <span class="as-tag">Why create an account?</span>
+          <h3>Everything about your training in one place.</h3>
+          <p>No phone calls, no paperwork, no waiting around after class. Sign up once and manage everything from here.</p>
+
+          <ul class="as-list">
+            <li>Choose and change your membership tier instantly</li>
+            <li>Track how many sessions you've used this week</li>
+            <li>Book private tuition with any coach</li>
+            <li>See upcoming classes and past attendance</li>
+            <li>Update payment details and view invoices</li>
+            <li>Post on the members' forum</li>
+            <li>Get grading reminders and event invites</li>
+          </ul>
+
+          <p class="as-quote">"Signed up on a Sunday evening in about two minutes. Was on the mat Monday morning." — member since 2024</p>
+        </aside>
+
+        <!-- RIGHT: forms -->
+        <div class="auth-main">
+
+          <div class="auth-tabs" id="authTabs" role="tablist">
+            <button class="active" data-tab="signup" role="tab" aria-selected="true">
+              <span class="tb-num">01</span>
+              Create account
+            </button>
+            <button data-tab="login" role="tab" aria-selected="false">
+              <span class="tb-num">02</span>
+              Log in
+            </button>
+          </div>
+
+          <!-- SIGN UP -->
+          <div class="auth-panel active" id="panel-signup">
+            <div class="ap-head">
+              <h3>Create your account</h3>
+              <p>Free to create. No card required until you choose a membership.</p>
+            </div>
+
+            <form id="signupForm" autocomplete="on">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="fname">First name <span class="req">Required</span></label>
+                  <input id="fname" name="fname" type="text" autocomplete="given-name" required>
+                </div>
+                <div class="field">
+                  <label for="lname">Last name <span class="req">Required</span></label>
+                  <input id="lname" name="lname" type="text" autocomplete="family-name" required>
+                </div>
+
+                <div class="field span-2">
+                  <label for="email">Email address <span class="req">Required</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" required>
+                </div>
+
+                <div class="field span-2">
+                  <label for="pw">
+                    Password
+                    <span class="opt">8+ characters</span>
+                  </label>
+                  <input id="pw" name="pw" type="password" autocomplete="new-password" minlength="8" required>
+                </div>
+
+                <div class="field span-2">
+                  <label for="plan">
+                    Membership
+                    <span class="opt">Change any time</span>
+                  </label>
+                  <select id="plan" name="plan">
+                    <option value="none">No membership yet — I'll decide later</option>
+                    <option value="basic">Basic — £25.00/month · 1 art, 2 sessions/week</option>
+                    <option value="intermediate">Intermediate — £35.00/month · 1 art, 3 sessions/week</option>
+                    <option value="advanced" selected>Advanced — £45.00/month · 2 arts, 5 sessions/week</option>
+                    <option value="elite">Elite — £60.00/month · unlimited, all arts</option>
+                    <option value="junior">Junior — £25.00/month · kids' sessions</option>
+                  </select>
+                </div>
+
+                <div class="field span-2">
+                  <div class="check-row">
+                    <input id="terms" name="terms" type="checkbox" required>
+                    <label for="terms">
+                      I agree to the <a href="#" onclick="return false;">terms of membership</a> and <a href="#" onclick="return false;">privacy policy</a>. I understand I can cancel any time.
+                    </label>
+                  </div>
+                </div>
+
+                <div class="field span-2">
+                  <div class="check-row">
+                    <input id="marketing" name="marketing" type="checkbox">
+                    <label for="marketing">
+                      Send me gym news, grading reminders and event invitations. You can turn this off at any time.
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn block" type="submit">
+                  Create my account
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+                  </svg>
+                </button>
+              </div>
+
+              <p class="form-note">
+                We'll send a confirmation email before your account goes live. Your first class is free — no card needed until you decide to join.
+              </p>
+            </form>
+
+            <p class="auth-alt">Already have an account? <a href="#" data-auth-switch="login">Log in instead</a></p>
+          </div>
+
+          <!-- LOG IN -->
+          <div class="auth-panel" id="panel-login">
+            <div class="ap-head">
+              <h3>Log in to your account</h3>
+              <p>Manage your membership, sessions and bookings.</p>
+            </div>
+
+            <form id="loginForm" autocomplete="on">
+              <div class="form-grid full">
+                <div class="field">
+                  <label for="lemail">Email address <span class="req">Required</span></label>
+                  <input id="lemail" name="lemail" type="email" autocomplete="email" required>
+                </div>
+
+                <div class="field">
+                  <label for="lpw">
+                    Password
+                    <a href="#" onclick="return false;">Forgot?</a>
+                  </label>
+                  <input id="lpw" name="lpw" type="password" autocomplete="current-password" required>
+                </div>
+
+                <div class="field">
+                  <div class="check-row">
+                    <input id="remember" name="remember" type="checkbox" checked>
+                    <label for="remember">Keep me logged in on this device</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn block" type="submit">
+                  Log in
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+                  </svg>
+                </button>
+              </div>
+
+              <p class="form-note">
+                Having trouble logging in? Message us through the contact page and we'll sort it out.
+              </p>
+            </form>
+
+            <p class="auth-alt">Don't have an account yet? <a href="#" data-auth-switch="signup">Create one in two minutes</a></p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================================
+           SIGNED IN VIEW — DASHBOARD
+           ============================================================ -->
+      <div id="dashboard">
+
+        <header class="dash-head">
+          <div class="dash-hello">
+            <span class="avatar" id="dashInitials">LP</span>
+            <div>
+              <span class="dh-tag">Welcome back</span>
+              <h2 id="dashName">L. Peters</h2>
+              <span class="dh-email" id="dashEmail">l.peters@example.com</span>
+            </div>
+          </div>
+
+          <div class="dash-head-actions">
+            <a class="btn ghost sm" href="timetable.html">View timetable</a>
+            <a class="btn sm" href="contact.html">
+              Book private tuition
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
+              </svg>
+            </a>
+          </div>
+        </header>
+
+        <!-- STATS STRIP -->
+        <div class="dash-stats">
+          <div>
+            <span class="k">Current tier</span>
+            <span class="v">Advanced<small> £45/mo</small></span>
+            <span class="note ok">Active membership</span>
+          </div>
+          <div>
+            <span class="k">Sessions this week</span>
+            <span class="v">3<small> / 5</small></span>
+            <span class="note">Resets Monday</span>
+          </div>
+          <div>
+            <span class="k">Disciplines</span>
+            <span class="v">2<small> of 4</small></span>
+            <span class="note">Jiu-Jitsu · Muay Thai</span>
+          </div>
+          <div>
+            <span class="k">Next billing</span>
+            <span class="v">01 Oct</span>
+            <span class="note">£45.00 due</span>
+          </div>
+        </div>
+
+        <!-- MAIN GRID -->
+        <div class="dash-grid">
+
+          <!-- LEFT COLUMN -->
+          <div class="dash-col">
+
+            <!-- MEMBERSHIP CARD -->
+            <div class="member-card">
+              <div class="mc-top">
+                <div>
+                  <span class="tier-name">Current membership · Tier 03</span>
+                  <h3>Advanced</h3>
+                </div>
+                <div class="price">
+                  <span class="amt">£45</span>
+                  <span class="per">PER MONTH</span>
+                </div>
+              </div>
+
+              <div class="mc-details">
+                <div>
+                  <span class="k">Disciplines</span>
+                  <span class="v">Jiu-Jitsu · Muay Thai</span>
+                </div>
+                <div>
+                  <span class="k">Weekly sessions</span>
+                  <span class="v">5 per week</span>
+                </div>
+                <div>
+                  <span class="k">Next billing</span>
+                  <span class="v">01 Oct 2026</span>
+                </div>
+              </div>
+
+              <div class="meter">
+                <div class="meter-head">
+                  <span class="lbl">Sessions used this week</span>
+                  <span class="val">3 / 5</span>
+                </div>
+                <div class="meter-bar"><span style="width:60%"></span></div>
+                <span class="reset">Resets Monday · includes open mat</span>
+              </div>
+            </div>
+
+            <!-- BOOKINGS -->
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <h3>Upcoming bookings</h3>
+                  <span class="sub">Next 14 days</span>
+                </div>
+                <a class="badge gold" href="timetable.html" style="text-decoration:none">Add booking</a>
+              </div>
+
+              <div class="card-body">
+                <div class="booking-list">
+
+                  <div class="booking">
+                    <div class="when">
+                      <span class="d">24</span>
+                      <span class="m">SEP</span>
+                    </div>
+                    <div class="info">
+                      <h4>Jiu-Jitsu — coached group class</h4>
+                      <span class="meta">17:30–19:00 · Main mat · Guy Victory</span>
+                      <span class="tag jj">Jiu-Jitsu</span>
+                    </div>
+                    <div class="actions">
+                      <button class="btn ghost sm" data-cancel>Cancel</button>
+                    </div>
+                  </div>
+
+                  <div class="booking">
+                    <div class="when">
+                      <span class="d">25</span>
+                      <span class="m">SEP</span>
+                    </div>
+                    <div class="info">
+                      <h4>Muay Thai — coached group class</h4>
+                      <span class="meta">17:30–19:00 · Main mat · Morris Davis</span>
+                      <span class="tag muay">Muay Thai</span>
+                    </div>
+                    <div class="actions">
+                      <button class="btn ghost sm" data-cancel>Cancel</button>
+                    </div>
+                  </div>
+
+                  <div class="booking">
+                    <div class="when">
+                      <span class="d">28</span>
+                      <span class="m">SEP</span>
+                    </div>
+                    <div class="info">
+                      <h4>Private tuition — Jiu-Jitsu guard passing</h4>
+                      <span class="meta">10:30–11:30 · Main mat · Mauricio Gomez</span>
+                      <span class="tag private">Private tuition</span>
+                    </div>
+                    <div class="actions">
+                      <button class="btn ghost sm" data-cancel>Cancel</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- ATTENDANCE -->
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <h3>Recent attendance</h3>
+                  <span class="sub">Last 10 sessions</span>
+                </div>
+                <span class="badge">Last 30 days</span>
+              </div>
+
+              <div class="card-body flush">
+                <table class="history-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date</th>
+                      <th scope="col">Class</th>
+                      <th scope="col">Discipline</th>
+                      <th scope="col">Coach</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="date">21 Sep</td>
+                      <td>Jiu-Jitsu</td>
+                      <td><span class="pill jj">Jiu-Jitsu</span></td>
+                      <td>Guy Victory</td>
+                    </tr>
+                    <tr>
+                      <td class="date">19 Sep</td>
+                      <td>Muay Thai</td>
+                      <td><span class="pill muay">Muay Thai</span></td>
+                      <td>Morris Davis</td>
+                    </tr>
+                    <tr>
+                      <td class="date">17 Sep</td>
+                      <td>Open mat</td>
+                      <td><span class="pill">Open mat</span></td>
+                      <td>—</td>
+                    </tr>
+                    <tr>
+                      <td class="date">15 Sep</td>
+                      <td>Jiu-Jitsu</td>
+                      <td><span class="pill jj">Jiu-Jitsu</span></td>
+                      <td>Mauricio Gomez</td>
+                    </tr>
+                    <tr>
+                      <td class="date">12 Sep</td>
+                      <td>Muay Thai</td>
+                      <td><span class="pill muay">Muay Thai</span></td>
+                      <td>Morris Davis</td>
+                    </tr>
+                    <tr>
+                      <td class="date">10 Sep</td>
+                      <td>Jiu-Jitsu</td>
+                      <td><span class="pill jj">Jiu-Jitsu</span></td>
+                      <td>Guy Victory</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="dash-col">
+
+            <!-- PAYMENT -->
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <h3>Payment method</h3>
+                  <span class="sub">Billed monthly</span>
+                </div>
+                <span class="badge ok">Active</span>
+              </div>
+
+              <div class="card-body">
+                <div class="pay-card">
+                  <span class="card-logo">VISA</span>
+                  <div class="card-info">
+                    <span class="num">•••• •••• •••• 4821</span>
+                    <span class="exp">Expires 08 / 2028</span>
+                  </div>
+                  <span class="default-tag">Default</span>
+                </div>
+
+                <div class="next-billing">
+                  <span class="k">Next payment</span>
+                  <span class="v">£45.00</span>
+                </div>
+                <div class="next-billing no-border">
+                  <span class="k">Due date</span>
+                  <span class="v mono">01 Oct 2026</span>
+                </div>
+
+                <div class="dash-actions">
+                  <button class="btn ghost block sm" data-toast="Card update form would open here.">Update card</button>
+                  <button class="btn ghost block sm" data-toast="Billing history would download as PDF.">View invoices</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- QUICK ACTIONS -->
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <h3>Quick actions</h3>
+                  <span class="sub">Common account tasks</span>
+                </div>
+              </div>
+
+              <div class="quick-actions">
+                <a href="#membership" data-toast="Opens the tier comparison below.">
+                  <span class="qa-label">Membership</span>
+                  <span class="qa-title">Change tier</span>
+                </a>
+                <a href="timetable.html">
+                  <span class="qa-label">Timetable</span>
+                  <span class="qa-title">Book a class</span>
+                </a>
+                <a href="contact.html">
+                  <span class="qa-label">Coaching</span>
+                  <span class="qa-title">Book private tuition</span>
+                </a>
+                <a href="#settings" data-toast="Scrolls to account settings.">
+                  <span class="qa-label">Account</span>
+                  <span class="qa-title">Edit details</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- ACCOUNT DETAILS -->
+            <div class="card">
+              <div class="card-head">
+                <div>
+                  <h3>Account details</h3>
+                  <span class="sub">Name, email and preferences</span>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <div class="detail-rows">
+                  <div class="detail-row">
+                    <span class="k">Name</span>
+                    <span class="v">L. Peters</span>
+                    <a href="#" class="act" data-toast="Name edit form would open here.">Edit</a>
+                  </div>
+                  <div class="detail-row">
+                    <span class="k">Email</span>
+                    <span class="v">l.peters@example.com<small>Verified</small></span>
+                    <a href="#" class="act" data-toast="Email change requires re-verification.">Change</a>
+                  </div>
+                  <div class="detail-row">
+                    <span class="k">Phone</span>
+                    <span class="v">07700 900 123</span>
+                    <a href="#" class="act" data-toast="Phone edit form would open here.">Edit</a>
+                  </div>
+                  <div class="detail-row">
+                    <span class="k">Emergency contact</span>
+                    <span class="v">J. Peters<small>07700 900 456</small></span>
+                    <a href="#" class="act" data-toast="Emergency contact edit form would open here.">Edit</a>
+                  </div>
+                  <div class="detail-row">
+                    <span class="k">Password</span>
+                    <span class="v">Last changed 3 months ago</span>
+                    <a href="#" class="act" data-toast="Password change form would open here.">Change</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DANGER ZONE -->
+            <div class="danger-zone">
+              <div class="dz-head">
+                <span class="dz-tag">Membership actions</span>
+                <h3>Freeze or cancel.</h3>
+              </div>
+              <div class="dz-body">
+                <p>Need a break? You can <b>freeze</b> your membership for up to 2 months per year on Advanced, or cancel entirely with no fees. Both take effect from your next billing date.</p>
+                <div class="dz-actions">
+                  <button class="btn ghost block sm" data-toast="Membership freeze form would open here.">Freeze membership</button>
+                  <button class="btn danger block sm" data-toast="Cancellation confirmation would appear here.">Cancel membership</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SIGN OUT -->
+        <div class="sign-out">
+          <span class="so-tag">End of session</span>
+          <button class="btn ghost" id="signOutBtn">Sign out of this device</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MEMBERSHIP REFERENCE
+       ============================================================ -->
+  <section class="tier-section" id="membership">
+    <div class="wrap">
+
+      <div class="tier-head">
+        <div class="reveal">
+          <p class="section-label"><span class="num">02</span> Membership</p>
+          <h2>Your tier,<br>explained.</h2>
+        </div>
+        <p class="lede reveal">
+          Your tier determines how many disciplines you can train and how many
+          sessions you get per week. Everything else — open mat, sauna, steam
+          room, changing rooms — is included at every level.
+        </p>
+      </div>
+
+      <div class="tier-table-wrap reveal">
+        <table class="tier-table">
+          <caption style="position:absolute;left:-9999px">Membership tier comparison</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tier</th>
+              <th scope="col">Disciplines</th>
+              <th scope="col">Sessions / week</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Basic</th>
+              <td>1 art</td>
+              <td>2</td>
+              <td>£25.00 / mo</td>
+            </tr>
+            <tr>
+              <th scope="row">Intermediate</th>
+              <td>1 art</td>
+              <td>3</td>
+              <td>£35.00 / mo</td>
+            </tr>
+            <tr class="row-featured">
+              <th scope="row">Advanced <span class="row-badge">Your tier</span></th>
+              <td>2 arts</td>
+              <td>5</td>
+              <td>£45.00 / mo</td>
+            </tr>
+            <tr>
+              <th scope="row">Elite</th>
+              <td>All 4 arts</td>
+              <td>Unlimited</td>
+              <td>£60.00 / mo</td>
+            </tr>
+            <tr>
+              <th scope="row">Junior</th>
+              <td>Kids' classes</td>
+              <td>All sessions</td>
+              <td>£25.00 / mo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="hero-actions reveal">
+        <button class="btn" data-toast="Tier change form would open here.">
+          Change my tier
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </button>
+        <a class="btn ghost" href="membership.html">See full pricing</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BOOKINGS INFO
+       ============================================================ -->
+  <section class="info-section" id="bookings">
+    <div class="wrap">
+
+      <div class="info-head">
+        <div class="reveal">
+          <p class="section-label"><span class="num">03</span> Booking</p>
+          <h2>How class booking<br>works.</h2>
+        </div>
+        <p class="lede reveal">
+          Coached group classes and open mat are drop-in — you don't need to
+          reserve a space. Private tuition is the only thing that needs booking
+          in advance, and you can do that from here.
+        </p>
+      </div>
+
+      <div class="info-grid">
+
+        <div class="info-card reveal">
+          <span class="ic-tag">Drop-in</span>
+          <h3>Group classes</h3>
+          <p>Coached group classes and open mat need no booking. Check the timetable, turn up ten minutes early, and sign in at reception.</p>
+        </div>
+
+        <div class="info-card reveal">
+          <span class="ic-tag">Book ahead</span>
+          <h3>Private tuition</h3>
+          <p>Private sessions are booked in advance with the coach of your choice, at £15.00 per hour. Choose a coach and a time from here.</p>
+        </div>
+
+        <div class="info-card reveal">
+          <span class="ic-tag">Tracked</span>
+          <h3>Your history</h3>
+          <p>Every class you attend is logged against your account, so you can see exactly how much you've trained and when.</p>
+        </div>
+
+      </div>
+
+      <div class="info-cta reveal">
+        <div>
+          <span class="ic-cta-tag">Private tuition</span>
+          <h3>Book a session with any coach.</h3>
+          <p>Useful for fixing a specific technique, preparing for a grading, or fast-tracking your progress if you can't make regular class times.</p>
+        </div>
+        <div class="ic-cta-actions">
+          <a class="btn" href="contact.html">
+            Book a session
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+          </a>
+          <a class="btn ghost" href="instructors.html">Meet the coaches</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PAYMENTS
+       ============================================================ -->
+  <section class="info-section alt" id="payments">
+    <div class="wrap">
+
+      <div class="info-head">
+        <div class="reveal">
+          <p class="section-label"><span class="num">04</span> Payments</p>
+          <h2>Billing and<br>payments.</h2>
+        </div>
+        <p class="lede reveal">
+          Memberships are billed monthly by card on the date you joined. No
+          direct debit, no minimum term, no exit fee.
+        </p>
+      </div>
+
+      <div class="info-grid">
+
+        <div class="info-card reveal">
+          <span class="ic-tag">Monthly</span>
+          <h3>Automatic billing</h3>
+          <p>Charged automatically to the card on file, on the same date each month. You'll get an email receipt every time.</p>
+        </div>
+
+        <div class="info-card reveal">
+          <span class="ic-tag">Annual</span>
+          <h3>Pay yearly, save 10%</h3>
+          <p>Available on any adult tier. Basic works out at £270 for the year instead of £300; Elite at £648 instead of £720. Ask us to switch you.</p>
+        </div>
+
+        <div class="info-card reveal">
+          <span class="ic-tag">No fees</span>
+          <h3>Free to change</h3>
+          <p>Switch tiers, freeze, or cancel entirely from your account page. No admin charges, no exit fees, no phone calls.</p>
+        </div>
+
+      </div>
+
+      <div class="info-cta reveal">
+        <div>
+          <span class="ic-cta-tag">Membership freeze</span>
+          <h3>Take a break without cancelling.</h3>
+          <p>If you're injured, travelling or just need a break, you can freeze your membership. Your tier is held, your billing stops, and you pick up exactly where you left off.</p>
+          <ul class="ic-cta-list">
+            <li><b>Basic &amp; Intermediate</b> — 1 month per year</li>
+            <li><b>Advanced</b> — 2 months per year</li>
+            <li><b>Elite</b> — 3 months per year</li>
+          </ul>
+        </div>
+        <div class="ic-cta-actions">
+          <button class="btn" data-toast="Freeze request form would open here.">
+            Freeze my membership
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+          </button>
+          <a class="btn ghost" href="membership.html#faq">Membership FAQ</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SETTINGS
+       ============================================================ -->
+  <section class="settings-section" id="settings">
+    <div class="wrap">
+
+      <div class="settings-head">
+        <div class="reveal">
+          <p class="section-label"><span class="num">05</span> Settings</p>
+          <h2>Account<br>settings.</h2>
+        </div>
+        <p class="lede reveal">
+          Keep your details up to date so we can reach you about gradings,
+          timetable changes and anything else important. You can also control
+          what we send you.
+        </p>
+      </div>
+
+      <div class="settings-wrap reveal">
+
+        <aside class="settings-side">
+          <span class="ss-tag">Why it matters</span>
+          <h3>Keep your details current.</h3>
+          <p>We only contact you when it matters — grading dates, class cancellations, membership changes. Having the right email and phone number means you never miss something important.</p>
+
+          <ul class="ss-list">
+            <li>Grading dates and reminders</li>
+            <li>Timetable changes and cancellations</li>
+            <li>Payment receipts and billing notices</li>
+            <li>Event invitations and seminars</li>
+            <li>Emergency contact in case of injury</li>
+          </ul>
+
+          <p class="ss-note">You can turn off marketing emails and keep essential account notices. We never share your details with third parties.</p>
+        </aside>
+
+        <div class="settings-main">
+          <span class="sm-tag">Update your details</span>
+          <h3>Changes save immediately.</h3>
+          <p class="sm-intro">You'll get a confirmation email for sensitive changes.</p>
+
+          <form id="settingsForm" autocomplete="on">
+            <div class="form-grid full">
+              <div class="field">
+                <label for="s-email">Email address <span class="req">Required</span></label>
+                <input id="s-email" type="email" value="l.peters@example.com" autocomplete="email" required>
+              </div>
+
+              <div class="field">
+                <label for="s-phone">Phone number</label>
+                <input id="s-phone" type="tel" value="07700 900 123" autocomplete="tel">
+              </div>
+
+              <div class="field">
+                <label for="s-emergency-name">Emergency contact name</label>
+                <input id="s-emergency-name" type="text" value="J. Peters" autocomplete="off">
+              </div>
+
+              <div class="field">
+                <label for="s-emergency-phone">Emergency contact phone</label>
+                <input id="s-emergency-phone" type="tel" value="07700 900 456" autocomplete="off">
+              </div>
+
+              <div class="field">
+                <label for="s-medical">
+                  Medical notes
+                  <span class="opt">Optional · confidential</span>
+                </label>
+                <textarea id="s-medical" rows="3" placeholder="Allergies, injuries, or anything a coach should know before you train."></textarea>
+              </div>
+
+              <div class="field">
+                <label>Communication preferences</label>
+                <div class="check-row">
+                  <input id="s-essential" type="checkbox" checked disabled>
+                  <label for="s-essential">Essential account notices (always on)</label>
+                </div>
+                <div class="check-row">
+                  <input id="s-grading" type="checkbox" checked>
+                  <label for="s-grading">Grading reminders and timetable changes</label>
+                </div>
+                <div class="check-row">
+                  <input id="s-events" type="checkbox" checked>
+                  <label for="s-events">Event invitations and seminar announcements</label>
+                </div>
+                <div class="check-row">
+                  <input id="s-news" type="checkbox">
+                  <label for="s-news">Gym news and member stories</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn block" type="submit">
+                Save changes
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+
+          <p class="form-note">
+            Medical notes are only visible to coaches and reception. They're never shared with other members, and they help us keep you safe during training.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CLOSE ACCOUNT -->
+      <div class="close-card reveal">
+        <div class="cc-head">
+          <span class="cc-tag">Close your account</span>
+          <h3>Irreversible.</h3>
+        </div>
+        <div class="cc-body">
+          <p>Closing your account permanently deletes your training history, attendance records and booking data. Your membership will also be cancelled. This cannot be undone.</p>
+          <p>If you just need a break, <a href="#payments">freeze your membership</a> instead — you'll keep your account and your history.</p>
+          <button class="btn danger" data-toast="Account closure confirmation would appear here.">Close my account</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section class="faq-section" id="faq">
+    <div class="wrap">
+      <div class="faq-head">
+        <div class="reveal">
+          <p class="section-label"><span class="num">06</span> Questions</p>
+          <h2>Account<br>questions.</h2>
+        </div>
+        <p class="lede reveal">
+          Common questions about accounts, memberships, billing and changes.
+          If yours isn't here, get in touch and a coach will answer it directly.
+        </p>
+      </div>
+
+      <div class="faq reveal">
+
+        <details open>
+          <summary>
+            <span class="faq-num">01</span>
+            <span class="faq-q">Do I need an account to train at DoBu?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">
+            <p>No — your first class is free and you don't need an account to book it. Just turn up ten minutes early in loose clothing, and a coach will take it from there.</p>
+            <p>You only need an account once you decide to join. An account is what lets you choose a membership, track your sessions, book private tuition and post on the forum.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="faq-num">02</span>
+            <span class="faq-q">Can I change my membership tier?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">
+            <p>Yes, any time, from your account page. Upgrades take effect immediately. Downgrades and cancellations take effect from your next billing date.</p>
+            <p>There's no fee for changing tiers, and no minimum term — you're only ever committed to the current month.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="faq-num">03</span>
+            <span class="faq-q">What happens if my payment fails?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">
+            <p>We'll email you straight away and retry the payment three days later. If it fails a second time, we'll contact you directly to update your card.</p>
+            <p>Your membership stays active during this window — we won't cut off access over a failed payment without giving you a chance to fix it.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="faq-num">04</span>
+            <span class="faq-q">Can I pause my membership?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">
+            <p>Yes — you can <b>freeze</b> your membership rather than cancelling. Your tier is held, billing stops, and you pick up exactly where you left off when you're ready to come back.</p>
+            <p>Freeze allowances are: Basic and Intermediate — 1 month per year; Advanced — 2 months; Elite — 3 months.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="faq-num">05</span>
+            <span class="faq-q">How do I cancel?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">
+            <p>Entirely online, from your account page. No phone call, no form, no retention conversation. Cancellation takes effect from your next billing date, and you keep access until then.</p>
+            <p>If you're not sure, message us first — sometimes a freeze or a tier change is a better fit than cancelling.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="faq-num">06</span>
+            <span class="faq-q">Is my data safe?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">
+            <p>Yes. Payment details are handled by a PCI-compliant payment processor — we never see or store your full card number. Medical notes are visible only to coaches and reception, and are never shared with other members.</p>
+            <p>We don't sell or share your data with third parties. You can close your account and delete your data at any time from the settings section.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="faq-num">07</span>
+            <span class="faq-q">Can I pay for a year up front?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">
+            <p>Yes. Annual payment is available on any adult tier at a 10% discount — Basic works out at £270 for the year instead of £300, and Elite at £648 instead of £720.</p>
+            <p>Message us or ask at reception to switch to annual billing.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="faq-num">08</span>
+            <span class="faq-q">What if I forget my password?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">
+            <p>Click the "Forgot?" link on the login form and we'll email you a reset link. The link is valid for one hour.</p>
+            <p>If you don't receive it within a few minutes, check your spam folder, or message us and we'll reset it manually.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="faq-num">09</span>
+            <span class="faq-q">Can I share my membership with a family member?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-a">
+            <p>No — memberships are personal and can't be shared or transferred. That said, we do offer <b>family discounts</b>: 15% off the second and subsequent junior memberships for families with multiple children training.</p>
+            <p>Students with a valid NUS or university card get 10% off any adult tier.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="final-cta">
+    <div class="final-inner">
+      <div class="reveal">
+        <p class="eyebrow" style="color:#fff">
+          <span style="background:#fff;width:36px;height:1px;display:inline-block"></span>
+        </p>
+        <h2>Start with a<br>free class.</h2>
+        <p>Create your account, book a trial, and you're on the mat. No card required until you decide to join — and you can cancel any time.</p>
+      </div>
+
+      <div class="final-actions reveal">
+        <button class="btn" id="ctaSignup">
+          Create an account
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </button>
+        <a class="btn ghost" href="contact.html">Book a free trial</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= TOAST ================= -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-top">
+
+    <div class="footer-brand">
+      <a class="brand" href="index.html">DO<span>BU</span> <em>MARTIAL ARTS</em></a>
+      <p>Judo, Jiu-Jitsu, Karate and Muay Thai, taught on one mat, with a full gym, sauna and steam room alongside it.</p>
+      <p class="footer-addr">
+        12 Foundry Lane, East Side, ES4 2QT<br>
+        <a href="tel:01632960482">01632 960 482</a>
+      </p>
+    </div>
+
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="martial-arts.html">Martial arts</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="instructors.html">Instructors</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Account</h4>
+      <ul>
+        <li><a href="#account">Sign up</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#bookings">Bookings</a></li>
+        <li><a href="#payments">Payments</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Gym</h4>
+      <ul>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html#find-us">Find us</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>DoBu Martial Arts is a fictional gym used for coursework purposes.</span>
+    <span>&copy; <span id="year">2026</span> DoBu Martial Arts</span>
+  </div>
+</footer>
+
+<!-- ================= FLOATING ELEMENTS ================= -->
+<a class="float-cta" href="contact.html">Book a free trial</a>
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+    <path d="M8 13V3M3.5 7.5L8 3l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+  </svg>
+</button>
+
+<script>
+(function () {
+  'use strict';
+
+  var sash      = document.getElementById('sash');
+  var progress  = document.getElementById('progress');
+  var toTop     = document.getElementById('toTop');
+  var navToggle = document.getElementById('navToggle');
+  var navLinks  = document.getElementById('navLinks');
+  var subnav    = document.getElementById('subnav');
+  var docEl     = document.documentElement;
+
+  /* ---------- toast ---------- */
+  var toastEl = document.getElementById('toast');
+  var toastTimer;
+
+  function showToast(message) {
+    if (!toastEl || !message) return;
+    toastEl.textContent = message;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      toastEl.classList.remove('show');
+    }, 3200);
+  }
+
+  document.querySelectorAll('[data-toast]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      if (el.tagName === 'A' && el.getAttribute('href') === '#') {
+        e.preventDefault();
+      }
+      showToast(el.getAttribute('data-toast'));
+    });
+  });
+
+  document.querySelectorAll('[data-cancel]').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var booking = btn.closest('.booking');
+      if (!booking) return;
+
+      booking.style.transition = 'opacity .3s ease, transform .3s ease';
+      booking.style.opacity = '0';
+      booking.style.transform = 'translateX(-10px)';
+
+      setTimeout(function () {
+        booking.style.display = 'none';
+      }, 300);
+
+      showToast('Booking cancelled. You can rebook any time.');
+    });
+  });
+
+  /* ---------- scroll ---------- */
+  var ticking = false;
+  function onScroll() {
+    var y = window.pageYOffset || docEl.scrollTop;
+    var max = docEl.scrollHeight - window.innerHeight;
+
+    if (sash) sash.classList.toggle('scrolled', y > 8);
+    if (toTop) toTop.classList.toggle('show', y > 700);
+    if (progress) progress.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { window.requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
+  onScroll();
+
+  if (toTop) {
+    toTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- mobile nav ---------- */
+  function closeNav() {
+    if (!navLinks || !navToggle) return;
+    navLinks.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navLinks.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') closeNav();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeNav();
+    });
+    document.addEventListener('click', function (e) {
+      if (!navLinks.classList.contains('open')) return;
+      if (navLinks.contains(e.target) || navToggle.contains(e.target)) return;
+      closeNav();
+    });
+  }
+
+  /* ---------- smooth anchors ---------- */
+  function scrollOffset() {
+    var sashH   = sash   ? sash.offsetHeight   : 0;
+    var subnavH = subnav ? subnav.offsetHeight : 0;
+    return sashH + subnavH + 20;
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = link.getAttribute('href');
+      if (!id || id === '#') return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.pageYOffset - scrollOffset();
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      if (history.replaceState) history.replaceState(null, '', id);
+    });
+  });
+
+  /* ---------- subnav scrollspy ---------- */
+  var subLinks = subnav ? Array.prototype.slice.call(subnav.querySelectorAll('a')) : [];
+  if (subLinks.length && 'IntersectionObserver' in window) {
+    var sections = subLinks
+      .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+      .filter(Boolean);
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = '#' + entry.target.id;
+        subLinks.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('href') === id);
+        });
+      });
+    }, { rootMargin: '-160px 0px -55% 0px', threshold: 0 });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ---------- auth tabs ---------- */
+  var authTabs = document.getElementById('authTabs');
+
+  function activateAuthTab(name) {
+    if (!authTabs) return;
+    authTabs.querySelectorAll('button').forEach(function (b) {
+      var isActive = b.getAttribute('data-tab') === name;
+      b.classList.toggle('active', isActive);
+      b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+    document.querySelectorAll('.auth-panel').forEach(function (panel) {
+      panel.classList.toggle('active', panel.id === 'panel-' + name);
+    });
+  }
+
+  if (authTabs) {
+    authTabs.addEventListener('click', function (e) {
+      var btn = e.target.closest('button[data-tab]');
+      if (!btn) return;
+      activateAuthTab(btn.getAttribute('data-tab'));
+    });
+  }
+
+  document.querySelectorAll('[data-auth-switch]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      activateAuthTab(link.getAttribute('data-auth-switch'));
+    });
+  });
+
+  /* ---------- auth → dashboard ---------- */
+  var authView  = document.getElementById('authView');
+  var dashboard = document.getElementById('dashboard');
+
+  function signIn(firstName, lastName, email) {
+    var initials = ((firstName || 'L').charAt(0) + (lastName || 'P').charAt(0)).toUpperCase();
+    var fullName = (firstName || 'L') + '. ' + (lastName || 'Peters');
+
+    var initialsEl = document.getElementById('dashInitials');
+    var nameEl     = document.getElementById('dashName');
+    var emailEl    = document.getElementById('dashEmail');
+
+    if (initialsEl) initialsEl.textContent = initials;
+    if (nameEl)     nameEl.textContent     = fullName;
+    if (emailEl)    emailEl.textContent    = email || 'l.peters@example.com';
+
+    if (authView)  authView.style.display  = 'none';
+    if (dashboard) dashboard.classList.add('active');
+
+    var offset = scrollOffset();
+    var top = dashboard ? dashboard.getBoundingClientRect().top + window.pageYOffset - offset : 0;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+
+    showToast('Signed in. Welcome back to DoBu.');
+  }
+
+  function signOut() {
+    if (dashboard) dashboard.classList.remove('active');
+    if (authView)  authView.style.display = '';
+
+    var offset = scrollOffset();
+    var top = authView ? authView.getBoundingClientRect().top + window.pageYOffset - offset : 0;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+
+    showToast('Signed out. See you on the mat.');
+  }
+
+  var signupForm = document.getElementById('signupForm');
+  if (signupForm) {
+    signupForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var fname = (document.getElementById('fname') || {}).value || '';
+      var lname = (document.getElementById('lname') || {}).value || '';
+      var email = (document.getElementById('email') || {}).value || '';
+      signIn(fname, lname, email);
+    });
+  }
+
+  var loginForm = document.getElementById('loginForm');
+  if (loginForm) {
+    loginForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      signIn('L', 'Peters', (document.getElementById('lemail') || {}).value || '');
+    });
+  }
+
+  var signOutBtn = document.getElementById('signOutBtn');
+  if (signOutBtn) signOutBtn.addEventListener('click', signOut);
+
+  var ctaSignup = document.getElementById('ctaSignup');
+  if (ctaSignup) {
+    ctaSignup.addEventListener('click', function () {
+      var accountSection = document.getElementById('account');
+      if (authView)  authView.style.display = '';
+      if (dashboard) dashboard.classList.remove('active');
+      activateAuthTab('signup');
+
+      if (accountSection) {
+        var top = accountSection.getBoundingClientRect().top + window.pageYOffset - scrollOffset();
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  }
+
+  var settingsForm = document.getElementById('settingsForm');
+  if (settingsForm) {
+    settingsForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      showToast('Settings saved.');
+    });
+  }
+
+  /* ---------- reveal ---------- */
+  var revealItems  = document.querySelectorAll('.reveal');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -70px 0px' });
+
+    revealItems.forEach(function (el, i) {
+      el.style.transitionDelay = (Math.min(i % 4, 3) * 80) + 'ms';
+      observer.observe(el);
+    });
+  } else {
+    revealItems.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---------- year ---------- */
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---------- deep link ---------- */
+  if (location.hash) {
+    var initial = document.querySelector(location.hash);
+    if (initial) {
+      window.setTimeout(function () {
+        var top = initial.getBoundingClientRect().top + window.pageYOffset - scrollOffset();
+        window.scrollTo({ top: top, behavior: 'auto' });
+      }, 60);
+    }
+  }
+
+})();
+</script>
+
+</body>
+</html>
